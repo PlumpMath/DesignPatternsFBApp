@@ -44,6 +44,14 @@ namespace FacebookApp
             {
                 MessageBox.Show(result.ErrorMessage);
             }
+
+            pictureCommonFriend.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureCoverPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureProfilePic.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureCoverPhoto.LoadAsync(m_LoggedInUser.Cover.SourceURL);
+            pictureProfilePic.LoadAsync(m_LoggedInUser.PictureLargeURL);
+            label1.Text = "WELCOME " + m_LoggedInUser.Name + "!!!";
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -81,7 +89,72 @@ namespace FacebookApp
         {
             getLikedPages();
         }
-              
 
+        private void buttonGetCommonFriend_Click(object sender, EventArgs e)
+        {
+            int nMaxPages = 0;
+            int nMaxFriends = 0;
+
+            // Set as self, in case no one has anything in common with user.
+            User MaxPagesFriend = m_LoggedInUser;
+            User MaxFriendsFriend = m_LoggedInUser;
+
+            foreach (User friend in m_LoggedInUser.Friends)
+            {
+                int nCommonLikes = GetCommonLikes(friend);
+                int nCommonFriends = GetCommonFriends(friend);
+
+                if (nCommonLikes > nMaxPages)
+                {
+                    nMaxPages = nCommonLikes;
+                    MaxPagesFriend = friend;
+                }
+
+                if (nCommonFriends > nMaxPages)
+                {
+                    nMaxFriends = nCommonFriends;
+                    MaxFriendsFriend = friend;
+                }
+            }
+
+            pictureCommonFriend.LoadAsync(MaxPagesFriend.PictureNormalURL);
+            pictureBox1.LoadAsync(MaxPagesFriend.PictureNormalURL);
+        }
+
+        private int GetCommonFriends(User friend)
+        {
+            int count = 0;
+
+            foreach (User item in m_LoggedInUser.Friends)
+            {
+                foreach (User item2 in friend.Friends)
+                {
+                    if (item.Id == item2.Id)
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
+        }
+
+        private int GetCommonLikes(User friend)
+        {
+            int count = 0;
+
+            foreach (Page item in m_LoggedInUser.LikedPages)
+            {
+                foreach (Page item2 in friend.LikedPages)
+                {
+                    if (item.Id == item2.Id)
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
+        }
     }
 }
