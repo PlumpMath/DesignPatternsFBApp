@@ -20,3 +20,14 @@ C:\Users\Eitam\Google Drive\לימודים\Design Patterns\DesignPatternsFBApp\F
 C:\Users\Eitam\Google Drive\לימודים\Design Patterns\DesignPatternsFBApp\FacebookApp\obj\Debug\FacebookApp.exe
 C:\Users\Eitam\Google Drive\לימודים\Design Patterns\DesignPatternsFBApp\FacebookApp\obj\Debug\FacebookApp.pdb
 C:\Users\Eitam\Google Drive\לימודים\Design Patterns\DesignPatternsFBApp\FacebookApp\obj\Debug\FacebookApp.csprojResolveAssemblyReference.cache
+C:\Users\Miriel\Google Drive\CS\Year4\Semester B\DesignPatterns\Ex01\DesignPatternsFBApp\FacebookApp\bin\Debug\FacebookApp.exe.config
+C:\Users\Miriel\Google Drive\CS\Year4\Semester B\DesignPatterns\Ex01\DesignPatternsFBApp\FacebookApp\obj\Debug\FacebookApp.exe
+C:\Users\Miriel\Google Drive\CS\Year4\Semester B\DesignPatterns\Ex01\DesignPatternsFBApp\FacebookApp\obj\Debug\FacebookApp.pdb
+C:\Users\Miriel\Google Drive\CS\Year4\Semester B\DesignPatterns\Ex01\DesignPatternsFBApp\FacebookApp\bin\Debug\FacebookApp.exe
+C:\Users\Miriel\Google Drive\CS\Year4\Semester B\DesignPatterns\Ex01\DesignPatternsFBApp\FacebookApp\bin\Debug\FacebookApp.pdb
+C:\Users\Miriel\Google Drive\CS\Year4\Semester B\DesignPatterns\Ex01\DesignPatternsFBApp\FacebookApp\bin\Debug\Facebook.dll
+C:\Users\Miriel\Google Drive\CS\Year4\Semester B\DesignPatterns\Ex01\DesignPatternsFBApp\FacebookApp\bin\Debug\FbGraphApiWrapper.dll
+C:\Users\Miriel\Google Drive\CS\Year4\Semester B\DesignPatterns\Ex01\DesignPatternsFBApp\FacebookApp\obj\Debug\FacebookApp.csprojResolveAssemblyReference.cache
+C:\Users\Miriel\Google Drive\CS\Year4\Semester B\DesignPatterns\Ex01\DesignPatternsFBApp\FacebookApp\obj\Debug\FacebookApp.MainForm.resources
+C:\Users\Miriel\Google Drive\CS\Year4\Semester B\DesignPatterns\Ex01\DesignPatternsFBApp\FacebookApp\obj\Debug\FacebookApp.Properties.Resources.resources
+C:\Users\Miriel\Google Drive\CS\Year4\Semester B\DesignPatterns\Ex01\DesignPatternsFBApp\FacebookApp\obj\Debug\FacebookApp.csproj.GenerateResource.Cache

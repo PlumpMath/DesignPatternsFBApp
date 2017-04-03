@@ -34,14 +34,19 @@
             this.likedPagesLinkLabel = new System.Windows.Forms.LinkLabel();
             this.pictureCoverPhoto = new System.Windows.Forms.PictureBox();
             this.pictureProfilePic = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelGreeting = new System.Windows.Forms.Label();
             this.buttonGetCommonFriend = new System.Windows.Forms.Button();
-            this.pictureCommonFriend = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCommonFriends = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCommonLikedPages = new System.Windows.Forms.PictureBox();
+            this.labelFriendsInCommon = new System.Windows.Forms.Label();
+            this.labelLikePagesInCommon = new System.Windows.Forms.Label();
+            this.pictureLikedPage = new System.Windows.Forms.PictureBox();
+            this.likedPageDescriptor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCoverPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfilePic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCommonFriend)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCommonFriends)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCommonLikedPages)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLikedPage)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLogin
@@ -68,16 +73,16 @@
             // 
             this.likedPagesListBox.FormattingEnabled = true;
             this.likedPagesListBox.ItemHeight = 16;
-            this.likedPagesListBox.Location = new System.Drawing.Point(12, 477);
+            this.likedPagesListBox.Location = new System.Drawing.Point(12, 672);
             this.likedPagesListBox.Name = "likedPagesListBox";
-            this.likedPagesListBox.Size = new System.Drawing.Size(112, 180);
+            this.likedPagesListBox.Size = new System.Drawing.Size(191, 180);
             this.likedPagesListBox.TabIndex = 2;
             // 
             // likedPagesLinkLabel
             // 
             this.likedPagesLinkLabel.AutoSize = true;
             this.likedPagesLinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.likedPagesLinkLabel.Location = new System.Drawing.Point(9, 457);
+            this.likedPagesLinkLabel.Location = new System.Drawing.Point(9, 652);
             this.likedPagesLinkLabel.Name = "likedPagesLinkLabel";
             this.likedPagesLinkLabel.Size = new System.Drawing.Size(107, 17);
             this.likedPagesLinkLabel.TabIndex = 3;
@@ -87,64 +92,104 @@
             // 
             // pictureCoverPhoto
             // 
-            this.pictureCoverPhoto.Location = new System.Drawing.Point(12, 56);
+            this.pictureCoverPhoto.Location = new System.Drawing.Point(12, 45);
             this.pictureCoverPhoto.Name = "pictureCoverPhoto";
-            this.pictureCoverPhoto.Size = new System.Drawing.Size(851, 383);
+            this.pictureCoverPhoto.Size = new System.Drawing.Size(828, 315);
             this.pictureCoverPhoto.TabIndex = 4;
             this.pictureCoverPhoto.TabStop = false;
             // 
             // pictureProfilePic
             // 
-            this.pictureProfilePic.Location = new System.Drawing.Point(13, 280);
+            this.pictureProfilePic.Location = new System.Drawing.Point(12, 190);
             this.pictureProfilePic.Name = "pictureProfilePic";
-            this.pictureProfilePic.Size = new System.Drawing.Size(190, 158);
+            this.pictureProfilePic.Size = new System.Drawing.Size(170, 170);
             this.pictureProfilePic.TabIndex = 5;
             this.pictureProfilePic.TabStop = false;
             // 
-            // label1
+            // labelGreeting
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(161, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 49);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "WELCOME";
+            this.labelGreeting.AutoSize = true;
+            this.labelGreeting.Font = new System.Drawing.Font("Lucida Console", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGreeting.Location = new System.Drawing.Point(183, 9);
+            this.labelGreeting.Name = "labelGreeting";
+            this.labelGreeting.Size = new System.Drawing.Size(162, 33);
+            this.labelGreeting.TabIndex = 7;
+            this.labelGreeting.Text = "WELCOME";
             // 
             // buttonGetCommonFriend
             // 
-            this.buttonGetCommonFriend.Location = new System.Drawing.Point(241, 448);
+            this.buttonGetCommonFriend.Location = new System.Drawing.Point(301, 389);
             this.buttonGetCommonFriend.Name = "buttonGetCommonFriend";
-            this.buttonGetCommonFriend.Size = new System.Drawing.Size(75, 23);
+            this.buttonGetCommonFriend.Size = new System.Drawing.Size(272, 23);
             this.buttonGetCommonFriend.TabIndex = 8;
-            this.buttonGetCommonFriend.Text = "button1";
+            this.buttonGetCommonFriend.Text = "Most in Common With";
             this.buttonGetCommonFriend.UseVisualStyleBackColor = true;
             this.buttonGetCommonFriend.Click += new System.EventHandler(this.buttonGetCommonFriend_Click);
             // 
-            // pictureCommonFriend
+            // pictureBoxCommonFriends
             // 
-            this.pictureCommonFriend.Location = new System.Drawing.Point(170, 477);
-            this.pictureCommonFriend.Name = "pictureCommonFriend";
-            this.pictureCommonFriend.Size = new System.Drawing.Size(207, 180);
-            this.pictureCommonFriend.TabIndex = 9;
-            this.pictureCommonFriend.TabStop = false;
+            this.pictureBoxCommonFriends.Location = new System.Drawing.Point(209, 465);
+            this.pictureBoxCommonFriends.Name = "pictureBoxCommonFriends";
+            this.pictureBoxCommonFriends.Size = new System.Drawing.Size(207, 181);
+            this.pictureBoxCommonFriends.TabIndex = 9;
+            this.pictureBoxCommonFriends.TabStop = false;
+            this.pictureBoxCommonFriends.Click += new System.EventHandler(this.pictureBoxCommonFriend_Click);
             // 
-            // pictureBox1
+            // pictureBoxCommonLikedPages
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(439, 477);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 180);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxCommonLikedPages.Location = new System.Drawing.Point(439, 466);
+            this.pictureBoxCommonLikedPages.Name = "pictureBoxCommonLikedPages";
+            this.pictureBoxCommonLikedPages.Size = new System.Drawing.Size(215, 180);
+            this.pictureBoxCommonLikedPages.TabIndex = 10;
+            this.pictureBoxCommonLikedPages.TabStop = false;
+            // 
+            // labelFriendsInCommon
+            // 
+            this.labelFriendsInCommon.AutoSize = true;
+            this.labelFriendsInCommon.Location = new System.Drawing.Point(206, 421);
+            this.labelFriendsInCommon.Name = "labelFriendsInCommon";
+            this.labelFriendsInCommon.Size = new System.Drawing.Size(0, 17);
+            this.labelFriendsInCommon.TabIndex = 11;
+            this.labelFriendsInCommon.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // labelLikePagesInCommon
+            // 
+            this.labelLikePagesInCommon.AutoSize = true;
+            this.labelLikePagesInCommon.Location = new System.Drawing.Point(436, 421);
+            this.labelLikePagesInCommon.Name = "labelLikePagesInCommon";
+            this.labelLikePagesInCommon.Size = new System.Drawing.Size(0, 17);
+            this.labelLikePagesInCommon.TabIndex = 12;
+            this.labelLikePagesInCommon.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // pictureLikedPage
+            // 
+            this.pictureLikedPage.Location = new System.Drawing.Point(209, 672);
+            this.pictureLikedPage.Name = "pictureLikedPage";
+            this.pictureLikedPage.Size = new System.Drawing.Size(170, 170);
+            this.pictureLikedPage.TabIndex = 13;
+            this.pictureLikedPage.TabStop = false;
+            // 
+            // likedPageDescriptor
+            // 
+            this.likedPageDescriptor.AutoSize = true;
+            this.likedPageDescriptor.Location = new System.Drawing.Point(385, 672);
+            this.likedPageDescriptor.Name = "likedPageDescriptor";
+            this.likedPageDescriptor.Size = new System.Drawing.Size(0, 17);
+            this.likedPageDescriptor.TabIndex = 14;
+            this.likedPageDescriptor.Click += new System.EventHandler(this.likedPageDescriptor_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(875, 669);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureCommonFriend);
+            this.ClientSize = new System.Drawing.Size(864, 866);
+            this.Controls.Add(this.likedPageDescriptor);
+            this.Controls.Add(this.pictureLikedPage);
+            this.Controls.Add(this.labelLikePagesInCommon);
+            this.Controls.Add(this.labelFriendsInCommon);
+            this.Controls.Add(this.pictureBoxCommonLikedPages);
+            this.Controls.Add(this.pictureBoxCommonFriends);
             this.Controls.Add(this.buttonGetCommonFriend);
             this.Controls.Add(this.pictureProfilePic);
             this.Controls.Add(this.pictureCoverPhoto);
@@ -152,13 +197,14 @@
             this.Controls.Add(this.likedPagesListBox);
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.buttonLogin);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelGreeting);
             this.Name = "MainForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureCoverPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfilePic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCommonFriend)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCommonFriends)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCommonLikedPages)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLikedPage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,10 +218,14 @@
         private System.Windows.Forms.LinkLabel likedPagesLinkLabel;
         private System.Windows.Forms.PictureBox pictureCoverPhoto;
         private System.Windows.Forms.PictureBox pictureProfilePic;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelGreeting;
         private System.Windows.Forms.Button buttonGetCommonFriend;
-        private System.Windows.Forms.PictureBox pictureCommonFriend;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxCommonFriends;
+        private System.Windows.Forms.PictureBox pictureBoxCommonLikedPages;
+        private System.Windows.Forms.Label labelFriendsInCommon;
+        private System.Windows.Forms.Label labelLikePagesInCommon;
+        private System.Windows.Forms.PictureBox pictureLikedPage;
+        private System.Windows.Forms.Label likedPageDescriptor;
     }
 }
 

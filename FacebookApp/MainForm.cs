@@ -45,13 +45,13 @@ namespace FacebookApp
                 MessageBox.Show(result.ErrorMessage);
             }
 
-            pictureCommonFriend.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxCommonFriends.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxCommonLikedPages.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureCoverPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureProfilePic.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureCoverPhoto.LoadAsync(m_LoggedInUser.Cover.SourceURL);
             pictureProfilePic.LoadAsync(m_LoggedInUser.PictureLargeURL);
-            label1.Text = "WELCOME " + m_LoggedInUser.Name + "!!!";
+            labelGreeting.Text = "WELCOME " + m_LoggedInUser.Name + "!!!";
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -117,19 +117,21 @@ namespace FacebookApp
                 }
             }
 
-            pictureCommonFriend.LoadAsync(MaxPagesFriend.PictureNormalURL);
-            pictureBox1.LoadAsync(MaxPagesFriend.PictureNormalURL);
+            pictureBoxCommonFriends.LoadAsync(MaxFriendsFriend.PictureNormalURL);
+            labelFriendsInCommon.Text = "Most friends in common with:\n" + MaxFriendsFriend.Name;
+            pictureBoxCommonLikedPages.LoadAsync(MaxPagesFriend.PictureNormalURL);
+            labelLikePagesInCommon.Text = "Most liked pages in common with:\n" + MaxPagesFriend.Name;
         }
 
         private int GetCommonFriends(User friend)
         {
             int count = 0;
 
-            foreach (User item in m_LoggedInUser.Friends)
+            foreach (User userFriend in m_LoggedInUser.Friends)
             {
-                foreach (User item2 in friend.Friends)
+                foreach (User friendFriend in friend.Friends)
                 {
-                    if (item.Id == item2.Id)
+                    if (userFriend.Id == friendFriend.Id)
                     {
                         count++;
                     }
@@ -143,11 +145,11 @@ namespace FacebookApp
         {
             int count = 0;
 
-            foreach (Page item in m_LoggedInUser.LikedPages)
+            foreach (Page likedPage in m_LoggedInUser.LikedPages)
             {
-                foreach (Page item2 in friend.LikedPages)
+                foreach (Page friendLikedPage in friend.LikedPages)
                 {
-                    if (item.Id == item2.Id)
+                    if (likedPage.Id == friendLikedPage.Id)
                     {
                         count++;
                     }
@@ -155,6 +157,26 @@ namespace FacebookApp
             }
 
             return count;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void likedPageDescriptor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxCommonFriend_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
