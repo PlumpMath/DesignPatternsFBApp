@@ -71,12 +71,12 @@ namespace FacebookApp
 
         private void getLikedPages()
         {
-            likedPagesListBox.Items.Clear();
-            likedPagesListBox.DisplayMember = "Name";
+            listBoxLikedPages.Items.Clear();
+            listBoxLikedPages.DisplayMember = "Name";
 
             foreach (Page page in m_LoggedInUser.LikedPages)
             {
-                likedPagesListBox.Items.Add(page);
+                listBoxLikedPages.Items.Add(page);
             }
 
             if (m_LoggedInUser.LikedPages.Count == 0)
@@ -159,24 +159,28 @@ namespace FacebookApp
             return count;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void listBoxLikedPages_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            diplaySelectedLikedPage();
         }
 
-        private void likedPageDescriptor_Click(object sender, EventArgs e)
+        private void diplaySelectedLikedPage()
         {
-
+            if (listBoxLikedPages.SelectedItems.Count == 1)
+            {
+                Page selectedPage= listBoxLikedPages.SelectedItem as Page;
+                if (selectedPage.PictureNormalURL != null)
+                {
+                    //likedPageDescriptor.Text = "Page name: " + selectedPage.Name + "\nNumber of likes: " + selectedPage.LikesCount.Value.ToString() + "\nFrom:" + selectedPage.Location.Country;
+                    likedPageDescriptor.Text = "Page name: " + selectedPage.Name;
+                    pictureBoxLikedPage.LoadAsync(selectedPage.PictureNormalURL);
+                }
+                else
+                {
+                    pictureBoxLikedPage.Image = pictureBoxLikedPage.ErrorImage;
+                }
+            }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBoxCommonFriend_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
