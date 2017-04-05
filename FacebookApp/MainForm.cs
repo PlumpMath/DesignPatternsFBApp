@@ -168,7 +168,7 @@ namespace FacebookApp
                     maxPagesFriend = friend;
                 }
 
-                if (commonFriends > maxPages)
+                if (commonFriends > maxFriends)
                 {
                     maxFriends = commonFriends;
                     maxFriendsFriend = friend;
